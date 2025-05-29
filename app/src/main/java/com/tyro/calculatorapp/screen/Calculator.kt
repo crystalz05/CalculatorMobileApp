@@ -7,7 +7,9 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
@@ -45,14 +47,8 @@ fun Calculator(viewModel: CalculatorViewModel = viewModel()) {
         listOf("1","2","3","+")
     )
 
-//    val buttons = listOf(
-//        listOf("C", "±", "%", "÷"),
-//        listOf("7", "8", "9", "×"),
-//        listOf("4", "5", "6", "-"),
-//        listOf("1", "2", "3", "+")
-//    )
 
-    Column(modifier = Modifier.fillMaxSize().padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+    Column(modifier = Modifier.fillMaxSize().padding(16.dp).statusBarsPadding().navigationBarsPadding(), verticalArrangement = Arrangement.spacedBy(10.dp)) {
 
         Column(modifier = Modifier.fillMaxWidth().weight(1f), horizontalAlignment = Alignment.End,
             verticalArrangement = Arrangement.Bottom
